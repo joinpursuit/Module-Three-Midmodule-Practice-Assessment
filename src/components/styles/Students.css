@@ -1,0 +1,68 @@
+.students {
+    
+        /* display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: normal;
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px; */
+
+
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      grid-auto-columns: auto;
+        grid-auto-rows:repeat(3, 1fr);
+     */
+
+
+     display: grid;
+     grid-template-columns: 300px 300px;
+     grid-template-rows: 500px 500px 500px; 
+     width: 50%;
+     gap: 20px 5px;
+     list-style: none;
+     text-align: center;
+     margin-top: 30px;
+     margin-left: 40px;
+
+     
+
+  }
+  .stuDivs{
+    /* width: 150px;
+    height: 150px; */
+    border: black 2px solid;
+
+
+  }
+
+
+.images{
+    width: 150px;
+    height: 150x;
+}
+
+p{
+    display: block;
+}
+.bio{
+
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 90%;
+        text-align: left;
+        margin-left: 4px;
+    }
+button{
+    margin-bottom: 5px;
+}
+
+.build-header{
+    margin-left: 20px;
+    font-size: 50px;
+    margin-bottom: 1px;
+}
