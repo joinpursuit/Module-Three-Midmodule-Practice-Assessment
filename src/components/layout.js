@@ -1,7 +1,9 @@
 // import { render } from "@testing-library/react";
 import React from "react";
 import Profile from "./profile";
-import "../styles/layout.css"
+import "../styles/layout.css";
+import Enrolled from "./Enrolled";
+import EnrollmentForm from "./EnrollmentForm";
 
 // 1. I can see sections with students,
 // class enrollment, and enroll as teacher form.
@@ -15,21 +17,25 @@ import "../styles/layout.css"
 const Layout = (props) => {
   const { studentData } = props;
   return (
-    <ul className="Students">
-      <h1>Ms Cooper's Class</h1>
-      {studentData.map(profile => {
-        return (
-          <Profile
-            name={profile.name}
-            age={profile.age}
-            image={profile.image}
-            bio={profile.bio}
-            gpa={profile.GPA}
-            key={profile.id}
-          />
-        );
-      })}
-    </ul>
+    <>
+      <ul className="Students">
+        <h1>Ms Cooper's Class</h1>
+        {studentData.map((profile) => {
+          return (
+            <Profile
+              name={profile.name}
+              age={profile.age}
+              image={profile.image}
+              bio={profile.bio}
+              gpa={profile.GPA}
+              key={profile.id}
+            />
+          );
+        })}
+      </ul>
+      <Enrolled />
+      <EnrollmentForm />
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "./components/layout";
 import studentData from "./data/studentData"
+import "./App.css"
 
 class App extends React.Component {
   render() {
