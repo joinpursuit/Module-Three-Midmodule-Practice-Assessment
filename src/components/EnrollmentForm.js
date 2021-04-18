@@ -2,7 +2,7 @@ import React from "react";
 
 class EnrollmentForm extends React.Component {
   state = {
-    name: "",
+    username: "",
     subject: "",
     email: "",
     zipcode: "",
@@ -12,43 +12,56 @@ class EnrollmentForm extends React.Component {
 
   submitForm = (e) => {
     e.preventDefault();
+    alert(`Man ${this.state.username}`);
   };
 
   changeName = (e) => {
-    this.setState({ name: e.target.value });
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
   };
-  changeSubject = (e) => {
-    this.setState({ subject: e.target.value });
-  };
-  changeEmail = (e) => {
-    this.setState({ email: e.target.value });
-  };
-  changeZipcode = (e) => {
-    this.setState({ zipcode: e.target.value });
-  };
-  changePhone = (e) => {
-    this.setState({ phone: e.target.value });
-  };
+
+  // changeName = (e) => {
+  //   this.setState({ name: e.target.value });
+  // };
+  // changeSubject = (e) => {
+  //   this.setState({ subject: e.target.value });
+  // };
+  // changeEmail = (e) => {
+  //   this.setState({ email: e.target.value });
+  // };
+  // changeZipcode = (e) => {
+  //   this.setState({ zipcode: e.target.value });
+  // };
+  // changePhone = (e) => {
+  //   this.setState({ phone: e.target.value });
+  // };
 
   // does not add name to array /////////////////////////////////////////
   addStudent = (name) => {
     this.setState((prevState) => ({
-      students: [...prevState.students, name]
+      students: [...prevState.students, name],
     }));
-    
   };
 
   render() {
-    const { name, subject, email, zipcode, phone, } = this.state;
+    const { username, subject, email, zipcode, phone } = this.state;
+    console.log(this.state);
     return (
       <form onSubmit={this.submitForm}>
         <h2>Teacher Enrollment</h2>
         <label htmlFor="name">Name</label>
-        <input onChange={this.changeName} id="name" type="text" value={name} />
+        <input
+          name="username"
+          onChange={this.changeName}
+          id="username"
+          type="text"
+          value={username}
+        />
 
         <label htmlFor="subject">Subject</label>
         <input
-          onChange={this.changeSubject}
+          name="subject"
+          onChange={this.changeName}
           id="subject"
           type="text"
           value={subject}
@@ -56,7 +69,8 @@ class EnrollmentForm extends React.Component {
 
         <label htmlFor="email">Email</label>
         <input
-          onChange={this.changeEmail}
+          name="email"
+          onChange={this.changeName}
           id="email"
           type="email"
           value={email}
@@ -64,21 +78,27 @@ class EnrollmentForm extends React.Component {
 
         <label htmlFor="zipcode">Zip Code</label>
         <input
-          onChange={this.changeZipcode}
+          name="zipcode"
+          onChange={this.changeName}
           id="zipcode"
-          type="number"
+          type="text"
           value={zipcode}
         />
 
         <label htmlFor="phone">Phone Number</label>
         <input
-          onChange={this.changePhone}
+          name="phone"
+          onChange={this.changeName}
           id="phone"
           type="tel"
           value={phone}
         />
 
-        <button onClick={() => this.addStudent(name)} type="submit" value={name}>
+        <button
+          // onClick={() => this.addStudent(name)}
+          // type="submit"
+          // value={name}
+        >
           Teach Class
         </button>
       </form>
