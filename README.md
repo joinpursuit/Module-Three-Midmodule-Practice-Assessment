@@ -87,5 +87,5 @@ The acceptance criteria below are covered by unit tests. Notice that there are s
   - Which components will be rendered by other components?
   - Draw out your component structure. Check your drawing against the user stories. Will you be able to implement all of the stories with this structure?
 - The students for the store are in the array in `data/studentData.js`. You can import this and pass it to your components.
-- You will need to check that a phone number is 10 digits long. You can use any 10 digit string for this. 
+- You will need to check that a phone number is 10 digits long. You can use any 10 digit string for this.
 - If your tests are failing, read the acceptance criteria closely. Some tests expect you to use specific text, classes, or HTML elements.
