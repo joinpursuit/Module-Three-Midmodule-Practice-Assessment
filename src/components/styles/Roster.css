@@ -1,0 +1,20 @@
+.rightRoster {
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+.mainRosterDiv {
+  display: flex;
+}
+/* .TeacherEnrollment{
+    margin-top: 500px;
+} */
+#total,
+#sumGPA {
+  font-size: 20px;
+  margin-top: 0.5px;
+}
+li {
+  font-size: 17px;
+}
