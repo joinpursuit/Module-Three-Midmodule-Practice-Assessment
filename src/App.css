@@ -1,0 +1,11 @@
+body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-left: 20px;
+}
+
+.roster {
+    grid-column: 3/4;
+    grid-row: 1/2
+}

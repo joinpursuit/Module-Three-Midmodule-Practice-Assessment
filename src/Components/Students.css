@@ -1,0 +1,25 @@
+.Students {
+  display: grid;
+  grid-template-columns: repeat(2, 0.3fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.student {
+  list-style: none;
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.teacherEnrollment {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 20px;
+}
+
+button {
+  width: 100px;
+  margin-top: 10px;
+}
