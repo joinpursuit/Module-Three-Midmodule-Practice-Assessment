@@ -1,15 +1,15 @@
 import React from 'react'
-
+import "./Students.css"
 
 const Student = (props) => {
     const {name, age, image, bio, GPA, addStudent} = props
 
 
     return (
-        <li > 
+        <li className="student"> 
             {/* onSubmit={this.addToClass} */}
             <h3>{name}</h3>
-            <p>{age}</p>
+            <p>Age: {age}</p>
             <img src={image} />
             <p>{bio}</p>
             <p>GPA: {GPA.toFixed(2)}</p>

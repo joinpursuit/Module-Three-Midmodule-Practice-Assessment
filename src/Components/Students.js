@@ -1,12 +1,13 @@
 import React from "react";
 import Student from "./Student";
+import "./Students.css"
 
 const Students = ({ studentData, addStudent }) => {
   return (
     <div>
        <h1>Build a Class</h1>
 
-    <ul className="EnrolledList">  {studentData.map((student) => {
+    <ul className="Students">  {studentData.map((student) => {
         return (
           <Student
             name={student.name}

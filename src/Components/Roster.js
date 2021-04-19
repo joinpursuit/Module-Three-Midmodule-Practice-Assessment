@@ -1,4 +1,5 @@
 import React from "react";
+import "./../App.css"
 
 class Roster extends React.Component {
   //   state = { countStudents: 0, averageGPA: this.props.averageGPA }
@@ -21,9 +22,9 @@ class Roster extends React.Component {
   render() {
     const { enrolled } = this.props;
     return (
-      <div>
+      <div className="roster">
         <h2>Enrolled</h2>
-        <ul>
+        <ul className="EnrolledList">
           {enrolled.map((student, i) => {
             return (
               <li>
