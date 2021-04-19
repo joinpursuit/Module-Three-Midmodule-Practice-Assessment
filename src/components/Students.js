@@ -13,17 +13,17 @@ const Students = ({ addStudent }) => {
   return (
     <div>
       <h1 className="build-header">Build a Class</h1>
-      <ul className="students">
+      <ul className="Students">
         {students.map((student) => (
           <li key={student.id} onClick={display} className="stuDivs">
             <h1> {student.name}</h1>
             <p>Age: {student.age}</p>
             <img className="images" src={student.image} alt="image" />
             <p className="bio">Bio: {student.bio}</p>
-            GPA: {student.GPA}
+            GPA: {student.GPA.toFixed(2)}
             <br/>
             <button onClick={() => addStudent(student.name, student.GPA)}>
-              Add Student
+              Add To Class
             </button>
           </li>
         ))}
