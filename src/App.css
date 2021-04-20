@@ -1,0 +1,8 @@
+.App {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+}
+.Students{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+}
