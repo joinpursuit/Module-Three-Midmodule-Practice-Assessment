@@ -1,0 +1,23 @@
+.students-list { grid-area: left }
+.students-enroll-stats { 
+    grid-area: rightA;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.Students {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+.student {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid green;
+}
+.student-img {
+    width: 150px;
+    height: 150px;
+}
+button { margin-bottom: 10px }

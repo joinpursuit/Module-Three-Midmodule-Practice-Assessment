@@ -1,13 +1,9 @@
 import React from "react";
-
+import ClassEnrollment from "./components/ClassEnrollment";
 
 class App extends React.Component {
   render() {
-    return (
-      <div class="App">
-        Hello World
-      </div>
-    );
+    return <ClassEnrollment />;
   }
 }
 

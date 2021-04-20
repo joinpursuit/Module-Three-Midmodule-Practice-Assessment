@@ -1,0 +1,8 @@
+.class-enrollment {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "left rightA"
+                         "left rightB";
+    gap: 30px;
+}
