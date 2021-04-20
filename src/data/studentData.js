@@ -49,6 +49,8 @@ const studentData = [
       "GPA": 3.0
   
     }
-  ];
+];
+  
+
 
 export default studentData;
