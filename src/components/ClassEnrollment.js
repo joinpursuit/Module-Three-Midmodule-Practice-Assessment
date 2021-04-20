@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import StudentsEnrollment from "./StudentsEnrollment"
-import TeacherEnrollment from "./TeacherEnrollment"
 import studentData from "../data/studentData"
 import "./ClassEnrollment.css"
 
@@ -34,10 +33,6 @@ export default class ClassEnrollment extends Component {
                     students={this.state.students}
                     GPA={this.state.GPA}
                     addToClass={this.addToClass}
-                />
-                <TeacherEnrollment
-                    GPA={this.state.GPA}
-                    length={this.state.students.length}
                 />
             </div>
         )

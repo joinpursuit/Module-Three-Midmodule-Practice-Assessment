@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./TeacherEnrollment.css"
 
 export default class TeacherEnrollment extends Component {
     onSubmit = (e) => {
@@ -7,31 +8,32 @@ export default class TeacherEnrollment extends Component {
         alert(msg)
     }
     inputDataCheck = (e) => {
-        const alertMsg1 = "Zip code is not valid"
         if(!e.target.name.value.trim()){
             return "Input is invalid"
         }
-        const zip = e.target.zip.value.trim()
-        const numbers = "1234567890"
-        if(zip.length !== 5){
-            return alertMsg1
-        } else {
-            for(let i = 0; i < zip.length; i++){
-                if(!numbers.includes(zip[i])){
-                    return alertMsg1
+        const validateZipPhone = (input, inputType) => {
+            const numbers = "1234567890"
+            const typeLength = inputType === "zip" ? 5 : 10
+            if(input.length !== typeLength){
+                return false
+            } else {
+                for(let i = 0; i < input.length; i++){
+                    if(!numbers.includes(input[i])){
+                        return false
+                    }
                 }
             }
+            return true
+        }
+        const alertMsg1 = "Zip code is not valid"
+        const zip = e.target.zip.value.trim()
+        if(!validateZipPhone(zip, "zip")){
+            return alertMsg1
         }
         const alertMsg2 = "Phone number is not valid"
         const phone = e.target.phone.value.trim()
-        if(phone.length !== 10){
+        if(!validateZipPhone(phone, "phone")){
             return alertMsg2
-        } else {
-            for(let i = 0; i < phone.length; i++){
-                if(!numbers.includes(phone[i])){
-                    return alertMsg2
-                }
-            }
         }
         const { GPA, length } = this.props
         const msg = `You are now the teacher.
@@ -41,7 +43,7 @@ export default class TeacherEnrollment extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="teacher-form">
                 <h1>Teacher Enrollment</h1>
                 <form onSubmit={this.onSubmit}>
                     <label htmlFor="name">Name</label>

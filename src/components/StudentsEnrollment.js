@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import TeacherEnrollment from "./TeacherEnrollment"
 import "./StudentsEnrollment.css"
 
 export default class StudentsEnrollment extends Component {
@@ -33,6 +34,10 @@ export default class StudentsEnrollment extends Component {
                     </ul>
                     <h2>Total Student Count: {this.props.students.length}</h2>
                     <h2>Average GPA: {this.props.GPA}</h2>
+                    <TeacherEnrollment
+                        GPA={this.props.GPA}
+                        length={this.props.students.length}
+                    />
                 </div>
             </>
         )
