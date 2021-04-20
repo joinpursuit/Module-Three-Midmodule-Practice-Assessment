@@ -4,7 +4,7 @@ import "../styles/Enrolled.css";
 const Enrolled = ({ roster }) => {
   return (
     <section>
-      {console.log(roster)}
+      {/* {console.log(roster)} */}
       {roster.map((rosterInfo) => {
         return (
           <>

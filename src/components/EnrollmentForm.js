@@ -22,22 +22,6 @@ class EnrollmentForm extends React.Component {
     this.setState({ [name]: value });
   };
 
-  // changeName = (e) => {
-  //   this.setState({ name: e.target.value });
-  // };
-  // changeSubject = (e) => {
-  //   this.setState({ subject: e.target.value });
-  // };
-  // changeEmail = (e) => {
-  //   this.setState({ email: e.target.value });
-  // };
-  // changeZipcode = (e) => {
-  //   this.setState({ zipcode: e.target.value });
-  // };
-  // changePhone = (e) => {
-  //   this.setState({ phone: e.target.value });
-  // };
-
   // does not add name to array /////////////////////////////////////////
   addStudent = (name) => {
     this.setState((prevState) => ({
@@ -109,3 +93,26 @@ class EnrollmentForm extends React.Component {
 }
 
 export default EnrollmentForm;
+
+// combine all the event listeners into one method ///// 
+// changeName = (e) => {
+//   const { name, value } = e.target;
+//   this.setState({ [name]: value });
+// };
+
+// each event listener separately /////////
+// changeName = (e) => {
+//   this.setState({ name: e.target.value });
+// };
+// changeSubject = (e) => {
+//   this.setState({ subject: e.target.value });
+// };
+// changeEmail = (e) => {
+//   this.setState({ email: e.target.value });
+// };
+// changeZipcode = (e) => {
+//   this.setState({ zipcode: e.target.value });
+// };
+// changePhone = (e) => {
+//   this.setState({ phone: e.target.value });
+// };

@@ -19,30 +19,36 @@ class Layout extends React.Component {
   state = { roster: [] };
 
   addToRoster = () => {
-    const addStudent = { studentName: "", studentCount: count++, studentGPA: 0 };
+    const addStudent = {
+      studentName: "",
+      studentCount: count++,
+      studentGPA: 0,
+    };
     this.setState((prevState) => ({
       roster: [...prevState.roster, addStudent],
     }));
   };
-
+  // pass studentData into profile and then map
   render() {
     const { roster } = this.state;
     return (
       <>
         <ul className="Students">
           <h1>Ms Cooper's Class</h1>
-          {studentData.map((profile) => {
-            return (
-              <Profile
-                name={profile.name}
-                age={profile.age}
-                image={profile.image}
-                bio={profile.bio}
-                gpa={profile.GPA}
-                key={profile.id}
-              />
-            );
-          })}
+          {/* {studentData.map((profile) => { */}
+          {/* return ( */}
+          <Profile
+            studentData={studentData}
+            addToRoster={this.addToRoster} // pass as prop not invoking
+            // name={profile.name}
+            // age={profile.age}
+            // image={profile.image}
+            // bio={profile.bio}
+            // gpa={profile.GPA}
+            // key={profile.id}
+          />
+          {/* ); */}
+          {/* })} */}
         </ul>
         <Enrolled roster={roster} />
         <EnrollmentForm />
