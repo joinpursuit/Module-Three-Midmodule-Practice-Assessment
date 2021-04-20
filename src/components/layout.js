@@ -14,41 +14,28 @@ import studentData from "../data/studentData";
 // I can see a Teacher Enrollment section that has inputs and labels for
 // Name, Subject, Email, Phone Number, Zip Code, and a button that says Teach Class
 // Don't forget to create <label> elements for your inputs
-let count = 0;
+
+
 class Layout extends React.Component {
   state = { roster: [] };
 
-  addToRoster = () => {
-    const addStudent = {
-      studentName: "",
-      studentCount: count++,
-      studentGPA: 0,
-    };
+  addToRoster = (person) => {
     this.setState((prevState) => ({
-      roster: [...prevState.roster, addStudent],
+      roster: [...prevState.roster, person, ],
     }));
+    // debugger
   };
   // pass studentData into profile and then map
   render() {
     const { roster } = this.state;
     return (
       <>
+        <h1>Ms Cooper's Class</h1>
         <ul className="Students">
-          <h1>Ms Cooper's Class</h1>
-          {/* {studentData.map((profile) => { */}
-          {/* return ( */}
           <Profile
             studentData={studentData}
             addToRoster={this.addToRoster} // pass as prop not invoking
-            // name={profile.name}
-            // age={profile.age}
-            // image={profile.image}
-            // bio={profile.bio}
-            // gpa={profile.GPA}
-            // key={profile.id}
           />
-          {/* ); */}
-          {/* })} */}
         </ul>
         <Enrolled roster={roster} />
         <EnrollmentForm />
