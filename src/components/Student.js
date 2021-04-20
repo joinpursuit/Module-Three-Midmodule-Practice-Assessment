@@ -1,13 +1,15 @@
 import React from 'react';
 
-const Student = () => {
+const Student = (props) => {
+    console.log('yo')
     return (
         <>
-            <h2> 'student name' </h2>
-            <div>'age'</div>
-            <img alt='student pic'/>
-            <div>'bio'</div>
-            <div>'gpa'</div>
+            <h2>{props.name} </h2>
+            <div>{props.age}</div>
+            <img alt='student pic'
+                src={props.image} />
+            <div>{props.bio}</div>
+            <div>{props.GPA}</div>
         </>
     )
 }

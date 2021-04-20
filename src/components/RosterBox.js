@@ -1,14 +1,15 @@
 import React from 'react';
 import Student from './Student.js'
-const RosterBox = () => {
+
+const RosterBox = (prop) => {
+    const studentData = prop.studentData
+    console.log(studentData)
+
+    
     return (
         <ul>
-            <Student />
-            <Student />
-            <Student />
-            <Student />
-            <Student />
-            <Student />
+            <Student { ...studentData }/>
+            <Student {... studentData }/>
         </ul>
     )
 }
