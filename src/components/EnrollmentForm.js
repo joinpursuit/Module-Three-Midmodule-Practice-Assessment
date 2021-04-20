@@ -12,7 +12,9 @@ class EnrollmentForm extends React.Component {
 
   submitForm = (e) => {
     e.preventDefault();
-    alert(`Man ${this.state.username}`);
+    alert(`You are now the teacher.
+                  You have students.
+                  The average GPA is 0.00`);
   };
 
   changeName = (e) => {
@@ -45,7 +47,7 @@ class EnrollmentForm extends React.Component {
 
   render() {
     const { username, subject, email, zipcode, phone } = this.state;
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <form onSubmit={this.submitForm}>
         <h2>Teacher Enrollment</h2>

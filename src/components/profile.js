@@ -9,7 +9,7 @@ const Profile = (props) => {
             <img src={image} alt="student" width='150'></img>
             <p className="Bio">Bio: {bio}</p>
             <p>GPA: {gpa}</p>
-            <button>Add To Class</button>
+            <button onClick={() => this.addToClass()}>Add To Class</button>
         </li>
     )
 }

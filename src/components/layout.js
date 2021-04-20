@@ -4,6 +4,7 @@ import Profile from "./profile";
 import "../styles/layout.css";
 import Enrolled from "./Enrolled";
 import EnrollmentForm from "./EnrollmentForm";
+import studentData from "../data/studentData";
 
 // 1. I can see sections with students,
 // class enrollment, and enroll as teacher form.
@@ -13,30 +14,41 @@ import EnrollmentForm from "./EnrollmentForm";
 // I can see a Teacher Enrollment section that has inputs and labels for
 // Name, Subject, Email, Phone Number, Zip Code, and a button that says Teach Class
 // Don't forget to create <label> elements for your inputs
+let count = 0;
+class Layout extends React.Component {
+  state = { roster: [] };
 
-const Layout = (props) => {
-  const { studentData } = props;
-  return (
-    <>
-      <ul className="Students">
-        <h1>Ms Cooper's Class</h1>
-        {studentData.map((profile) => {
-          return (
-            <Profile
-              name={profile.name}
-              age={profile.age}
-              image={profile.image}
-              bio={profile.bio}
-              gpa={profile.GPA}
-              key={profile.id}
-            />
-          );
-        })}
-      </ul>
-      <Enrolled />
-      <EnrollmentForm />
-    </>
-  );
-};
+  addToRoster = () => {
+    const addStudent = { studentName: "", studentCount: count++, studentGPA: 0 };
+    this.setState((prevState) => ({
+      roster: [...prevState.roster, addStudent],
+    }));
+  };
+
+  render() {
+    const { roster } = this.state;
+    return (
+      <>
+        <ul className="Students">
+          <h1>Ms Cooper's Class</h1>
+          {studentData.map((profile) => {
+            return (
+              <Profile
+                name={profile.name}
+                age={profile.age}
+                image={profile.image}
+                bio={profile.bio}
+                gpa={profile.GPA}
+                key={profile.id}
+              />
+            );
+          })}
+        </ul>
+        <Enrolled roster={roster} />
+        <EnrollmentForm />
+      </>
+    );
+  }
+}
 
 export default Layout;
