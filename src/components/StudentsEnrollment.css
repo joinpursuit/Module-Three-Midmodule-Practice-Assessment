@@ -1,0 +1,12 @@
+.students-list { grid-area: left }
+.Students {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.student {
+    border: 1px solid green;
+}
+.student-img {
+    width: 150px;
+    height: 150px;
+}
