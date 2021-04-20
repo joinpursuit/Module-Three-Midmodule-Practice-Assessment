@@ -1,22 +1,28 @@
-import React from "react"
-import studentData from "../data/studentData"
-import Student from "./Student"
+import React from "react";
+import Student from "./Student";
+import "./Students.css";
 
-class Students extends React.Component {
-    render(){
-        return (
-            <section>
-                <h1>Build a Class</h1>
-                <ul>
-                    {studentData.map(student =>{
-                        <Student
-                            
-                        />
-                    })}
-                </ul>
-            </section>
-        )
-    }
-}
+const Students = ({ studentData, addStudent }) => {
+  return (
+    <div>
+      <h1>Build a Class</h1>
 
-export default Students
+      <ul className="Students">
+        {studentData.map((student) => {
+          return (
+            <Student
+              name={student.name}
+              age={student.age}
+              image={student.image}
+              GPA={student.GPA}
+              bio={student.bio}
+              key={student.id}
+              addStudent={addStudent}
+            />
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+export default Students;

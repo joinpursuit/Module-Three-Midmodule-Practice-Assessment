@@ -1,8 +1,8 @@
 import React from "react";
 import studentData from "./data/studentData";
-import Students from "./Components/Students";
-import Roster from "./Components/Roster";
-import TeacherEnrollment from "./Components/TeacherEnrollment";
+import Students from "./components/Students";
+import Roster from "./components/Roster";
+import TeacherEnrollment from "./components/TeacherEnrollment";
 import "./App.css";
 
 class App extends React.Component {
