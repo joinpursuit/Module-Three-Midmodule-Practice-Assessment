@@ -10,17 +10,13 @@ const Enrolled = ({ roster }) => {
       {roster.map((rosterInfo) => {
         // debugger;
         return (
-          <ul key={rosterInfo}>
-            <li>
-              <p>
-                {rosterInfo[0]}: {rosterInfo[1]}
-              </p>
-            </li>
-          </ul>
+          <li key={rosterInfo}>
+            {rosterInfo[0]}: {rosterInfo[1]}
+          </li>
         );
       })}
       <h3>Total Student Count: {roster.length}</h3>
-      <h3>Average GPA: {roster[1]}</h3>
+      <h3>Average GPA: </h3> {/* class average GPA here*/}
     </section>
   );
 };

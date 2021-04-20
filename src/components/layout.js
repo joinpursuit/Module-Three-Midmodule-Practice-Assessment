@@ -20,10 +20,10 @@ class Layout extends React.Component {
   state = { roster: [] };
 
   addToRoster = (person) => {
+   debugger
     this.setState((prevState) => ({
-      roster: [...prevState.roster, person, ],
+      roster: [...prevState.roster, person ],
     }));
-    // debugger
   };
   // pass studentData into profile and then map
   render() {
