@@ -1,0 +1,12 @@
+.studentBox{
+    border: 1px black solid;    
+    margin: 2px;
+    list-style: none;
+    align-content: center;
+    
+    text-align: center;
+}
+.studentBox img{
+    width: 15vw;
+    align-content: center;
+}
