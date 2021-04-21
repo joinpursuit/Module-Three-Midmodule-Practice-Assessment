@@ -1,0 +1,12 @@
+.EnrolledList {
+  display: block;
+}
+
+.Form label {
+  display: block;
+}
+
+.Form button {
+  display: block;
+  margin: 5px;
+}
