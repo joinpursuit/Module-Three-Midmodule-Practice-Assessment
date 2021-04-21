@@ -9,9 +9,23 @@ body {
 
 
 
-
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+
+.Students{
+  background-color: rgb(93, 148, 131);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.EnrolledList li {
+  width: 50%;
+}
+
+.slist {
+  text-align: center;
 }
