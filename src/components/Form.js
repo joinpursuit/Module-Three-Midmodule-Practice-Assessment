@@ -1,41 +1,44 @@
 import React from 'react'
 
-const Form = () => {
-
-    return (
-        <div>
-            <label for='name'>Name</label>
-            <input
-                type='text'
-                name='name'
-            />
+export default class Form extends React.Component {
+    constructor(props) {
+        //set the initial state
+        super(props)
+        console.log('form here',this.props)
+    }
+    render() {
+        return (
+            <div>
+                <label htmlFor='name'>Name</label>
+                <input
+                    type='text'
+                    name='name'
+                />
             
-            <label for='name'>Subject</label>
-            <input
-                type='text'
-                name='subject'
-            />
+                <label htmlFor='name'>Subject</label>
+                <input
+                    type='text'
+                    name='subject'
+                />
 
-            <label for='name'>Email</label>
-            <input
-                type='text'
-                name='email'
-            />
+                <label htmlFor='name'>Email</label>
+                <input
+                    type='text'
+                    name='email'
+                />
 
-            <label for='zip'>Zip Code</label>
-            <input
-                type='text'
-                name='zip'
-            />
+                <label htmlFor='zip'>Zip Code</label>
+                <input
+                    type='text'
+                    name='zip'
+                />
 
-            <label for='name'>Phone Number</label>
-            <input
-                type='text'
-                name='phone'
-            />  
-        </div>
-    )
+                <label htmlFor='name'>Phone Number</label>
+                <input
+                    type='text'
+                    name='phone'
+                />
+            </div>
+        )
+    }
 }
-
-export default Form;
- 

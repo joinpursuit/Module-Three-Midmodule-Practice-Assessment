@@ -3,13 +3,17 @@ import Student from './Student.js'
 
 const RosterBox = (prop) => {
     const studentData = prop.studentData
-    console.log(studentData)
-
-    
     return (
         <ul>
-            <Student { ...studentData }/>
-            <Student {... studentData }/>
+           { studentData.map((student) => {
+                return (<Student
+                    name={student.name}
+                    age={student.age}
+                    image={student.image}
+                    bio={student.bio}
+                    GPA={student.GPA}
+                />)
+            })}
         </ul>
     )
 }

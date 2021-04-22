@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Student = (props) => {
-    console.log('yo')
     return (
         <>
             <h2>{props.name} </h2>
