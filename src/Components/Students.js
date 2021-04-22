@@ -19,10 +19,12 @@ const Students = (props) => {
     })
 
     return (
-        <ul>
+        <div className="uList">
             <h1>Build a Class</h1>
-            {helperFunction}
-        </ul>
+            <div className="studentCards">
+                {helperFunction}
+            </div>
+        </div>
     )
 }
 

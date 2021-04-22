@@ -1,11 +1,19 @@
-ul {
+.uList {
     list-style: none;
     text-align: center;
 }
 img {
-    width: 10em;
+    width: 8em;
 }
 
 li {
-    width: 200px;
+    width: 150px;
+    border: 1px solid green;
+    margin: 5px;
+}
+
+.studentCards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: ;
 }

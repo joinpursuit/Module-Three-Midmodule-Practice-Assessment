@@ -4,6 +4,7 @@ import "./App.css"
 import Students from "./Components/Students.js"
 import studentData from "./data/studentData"
 import TeacherEnrollment from "./Components/TeacherEnrollment.js"
+import Roster from "./Components/Roster.js"
 
 class App extends React.Component {
   // constructor() {
@@ -13,11 +14,21 @@ class App extends React.Component {
   //     studentData : studentData
   //   }
   // }
+  studentAvg = () => {
+    
+  }
+  
   render() {
+
     return (
       <div className="app">
-        <Students studentData ={studentData}/>
-        <TeacherEnrollment />
+        <div className="leftside">
+          <Students studentData ={studentData}/>
+        </div>
+        <div className="rightside">
+          <Roster />
+          <TeacherEnrollment />
+        </div>
       </div>
     );
   }
