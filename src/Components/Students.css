@@ -1,0 +1,5 @@
+div{
+    flex-direction: row;
+    border: 1px solid green;
+    flex: 50%
+}
