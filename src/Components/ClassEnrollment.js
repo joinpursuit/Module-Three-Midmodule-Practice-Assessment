@@ -11,7 +11,7 @@ class ClassEnrollment extends React.Component {
     return (
       <div>
         <h2 key={studentInfo.id}>Enrolled</h2>
-        <ul className="EnrolledList"></ul>
+        <ul className="EnrolledList">
         {studentInfo.map((student) => {
           const { name, GPA, id } = student;
 
@@ -22,6 +22,7 @@ class ClassEnrollment extends React.Component {
             </li>
           );
         })}
+        </ul>
         <h3>Total Student Count: {studentInfo.length}</h3>
         <h3>Average GPA: {avgGPA.toFixed(2)}</h3>
       </div>

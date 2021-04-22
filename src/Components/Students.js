@@ -16,7 +16,7 @@ class Students extends React.Component {
     return (
       <div>
         <h1>Art {"&"} Social Justice</h1>
-        <ul className="Students"></ul>
+        <ul className="Students">
         {studentData.map((student) => {
           const { name, age, image, bio, GPA , id } = student
           return (
@@ -31,6 +31,7 @@ class Students extends React.Component {
             </li>
           );
         })}
+        </ul>
       </div>
     );
   }
