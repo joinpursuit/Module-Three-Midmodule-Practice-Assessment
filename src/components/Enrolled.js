@@ -1,16 +1,25 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export class Enrolled extends Component {
-    render() {
-        return (
-            <div>
-                <h2>Enrolled</h2>
-                <ul className ="EnrolledList"></ul>
-                <h3>Total Student Count: 0</h3>
-                <h3>Average GPA: 0</h3>
-            </div>
-        )
-    }
+function Enrolled (props) {
+  const { students, GPA } = { ...props }
+  const len = students.length
+
+  return (
+    <div>
+      <h2>Enrolled</h2>
+      <ul className='EnrolledList'>
+        {students.map((student, i) => {
+          return (
+            <li key={i}>
+              {student.name}: {student.GPA.toFixed(2)}
+            </li>
+          )
+        })}
+      </ul>
+      <h3>Total Student Count: {len}</h3>
+      <h3>Average GPA: {GPA}</h3>
+    </div>
+  )
 }
 
 export default Enrolled
