@@ -1,4 +1,5 @@
 import React from "react";
+import "./TeacherEnrollment.css"
 import includesLetters from '../helperFunctions/helperFunctions';
 
 class TeacherEnrollment extends React.Component {

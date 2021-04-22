@@ -32,8 +32,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <Students enrollStudent={this.enrollStudent} />
+        <div className="RightSide">
         <ClassEnrollment studentInfo={this.state.studentInfo} avgGPA={this.getAvgGPA() || 0} />
         <TeacherEnrollment studentInfo={this.state.studentInfo} avgGPA={this.getAvgGPA() || 0}/>
+        </div>
       </div>
     );
   }
