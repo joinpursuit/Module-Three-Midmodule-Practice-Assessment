@@ -1,0 +1,22 @@
+.Students{
+    display: grid;
+    /* grid-template-columns: 350px 350px; */
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 1fr 1fr 1fr;    
+    align-items: center;
+    row-gap: 5px;
+    /* column-gap: 1px; */
+    /* margin: 8px;
+    border: 2px; */
+}
+
+.Student{
+    
+    border: 6px solid green;
+    height: 100%;
+    text-align: center;
+}
+
+.Student img {
+    width: 70%;
+}
