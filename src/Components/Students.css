@@ -1,0 +1,49 @@
+li > img {
+  height: 150px;
+  width: 150px;
+}
+
+.StudentList {
+  list-style: none;
+  border: 2px solid green;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h3 {
+  text-align: center;
+}
+
+.FormContainer {
+  grid-column: 2/3;
+  /* display: flex; */
+  /* flex-direction: column; */
+  align-items: flex-end;
+}
+
+/* Corey's Notes */
+/* .Student {
+  display: grid;
+} */
+
+/* .Students ul {
+  display: grid;
+} */
+
+/* .Students img {
+  height: 150px;
+  width: 150px;
+} */
+
+/* .Students li {
+  list-style: none;
+  border: 1px solid green; 
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+} */
