@@ -6,10 +6,19 @@ import ClassEnrollment from "./Components/ClassEnrollment"
 
 
 class App extends React.Component {
+
+  handleClick = () => {
+
+  }
+
+
+
+
+
   render() {
     return (
       <div>
-        <Students studentData={studentData}/>
+        <Students studentData={studentData} handleClick={this.handleClick}/>
         <TeacherEnrollment />
         <ClassEnrollment />
       </div>

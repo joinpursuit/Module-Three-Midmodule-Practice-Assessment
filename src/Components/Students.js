@@ -2,12 +2,9 @@ import React from 'react'
 
 function Students(props) {
 
-    const { studentData } = props
+    const { studentData, handleClick } = props
 
 
-    handleClick = () => {
-        
-    }
 
     const StudentList = studentData.map((student, i) =>{
 
@@ -18,7 +15,7 @@ function Students(props) {
                 <img src={student.image} alt="student"/>
                 <p>Bio: {student.bio}</p>
                 <p>GPA: {student.GPA.toFixed(2)}</p>
-                <button onClick={this.handleClick}>Add To Class</button>
+                <button onClick={handleClick}>Add To Class</button>
             </li>
         )
     })
