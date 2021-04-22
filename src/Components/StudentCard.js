@@ -1,22 +1,23 @@
-import React, { Component } from "react";
-import studentData from "../data/studentData";
+import React from "react";
+// import studentData from "../data/studentData";
 import "./studentCard.css"
 
 const StudentCard = (props) => {
-    const { name, age, bio, image, gpa } = props;
+    const { student, enrolledStudent } = props;
+    // const {enrolledStudent} = enrolledStudent;
 
-    sendData = () => {
+    // sendData = () => {
 
-    }
+    // }
 
     return (
         <div>
-            <h3>{name}</h3>
-            <p>Age: {age}</p>
-            <img src={image} className="studentImage"></img>
-            <p>Bio: {bio}</p>
-            <p>GPA: {gpa}</p>
-            <button onClick={()=>this.sendData()} ></button>
+            <h3>{student.name}</h3>
+            <p>Age: {student.age}</p>
+            <img src={student.image} className="studentImage" alt="Profile pics"></img>
+            <p>Bio: {student.bio}</p>
+            <p>GPA: {student.GPA.toFixed(2)}</p>
+            <button onClick={() => enrolledStudent({student})} >Add to Class</button>
         </div>
     )
 }
