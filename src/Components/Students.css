@@ -1,0 +1,42 @@
+li h3 {
+  text-align: center;
+}
+
+li > img {
+  height: 125px;
+  width: 150px;
+}
+
+li p {
+  text-align: center;
+}
+
+.App div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Students {
+  display: grid;
+}
+
+.StudentList {
+  list-style: none;
+  border: 2px solid green;
+  width: 200px;
+  margin: 5px;
+}
+
+.StudentList:first-child {
+  margin-right: 20px;
+}
+
+
+li button {
+  margin-bottom: 5px;
+}
+
+li button:hover {
+  cursor: pointer;
+}
