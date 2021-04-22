@@ -26,7 +26,7 @@ class Students extends React.Component {
               <img src={image} alt="student" />
               <p>Bio: {bio}</p>
               <p>GPA: {GPA.toFixed(2)}</p>
-              <button onClick={() => enrollStudent({name, GPA})}>Add to Class</button> 
+              <button onClick={() => enrollStudent({name, GPA})}>Add To Class</button> 
               {/* add diff func from parent */}
             </li>
           );

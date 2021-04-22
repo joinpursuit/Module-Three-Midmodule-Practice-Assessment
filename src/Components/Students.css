@@ -17,6 +17,10 @@ li p {
   text-align: center;
 }
 
+.Students {
+  display: grid;
+}
+
 .StudentList {
   list-style: none;
   border: 2px solid green;
@@ -31,4 +35,8 @@ li p {
 
 li button {
   margin-bottom: 5px;
+}
+
+li button:hover {
+  cursor: pointer;
 }
