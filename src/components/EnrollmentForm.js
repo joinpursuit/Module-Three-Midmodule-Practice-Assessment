@@ -7,14 +7,15 @@ class EnrollmentForm extends React.Component {
     email: "",
     zipcode: "",
     phone: "",
-    students: [],
   };
 
+  
   submitForm = (e) => {
+    const { roster, averageGPA } = this.props;
     e.preventDefault();
     alert(`You are now the teacher.
-                  You have students.
-                  The average GPA is 0.00`);
+                  You have ${roster.length} students.
+                  The average GPA is ${averageGPA}`);
   };
 
   changeName = (e) => {
@@ -39,7 +40,7 @@ class EnrollmentForm extends React.Component {
         <input
           name="username"
           onChange={this.changeName}
-          id="username"
+          id="name"
           type="text"
           value={username}
         />
