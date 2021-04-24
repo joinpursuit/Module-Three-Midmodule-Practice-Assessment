@@ -1,0 +1,12 @@
+.Students {
+    display:grid;
+}
+
+.Students img{
+    height: 150px;
+    width: 150px;
+}
+
+.Students li {
+    list-style: none;
+}
