@@ -1,0 +1,23 @@
+.Students {
+    display: grid;
+}
+
+.Students ul {
+    grid-template-columns: 300px 300px;
+}
+
+.Students img {
+    height: 150px;
+    width: 150px;
+}
+
+.Students li {
+    list-style: none;
+    border: 1px solid green;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
