@@ -1,0 +1,84 @@
+import React from "react";
+import "./Form.css";
+class Form extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: "", subject: "", email: "", zipCode: "", phone: "" };
+    // debugger
+  }
+  checkSubmit = (e) => {
+    e.preventDefault();
+    const {
+      name,
+      subject,
+      email,
+      zipCode,
+      phone,
+    } = this.state;
+
+    const { averageGPA,
+      addedStudents } = this.props
+
+    if (name === ""||subject===""||email === "") {
+      alert("Input is invalid");
+    } else if(zipCode === "" || !isNaN(zipCode)){
+      alert("Zip code is not valid")
+    }else {
+      alert(`You are the now the teacher. 
+            You have ${addedStudents||0} students.
+              the Average GPA: ${averageGPA||0}`); //this is the only line with backticks , create more consistency
+    }
+  };
+  updateState = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  render() {
+    const { name, subject, email, zipCode, phone } = this.state;
+    return (
+      <form onSubmit={this.checkSubmit}>
+        <h3>Teacher Enrollment</h3>
+        <label htmlFor="name">Name</label>
+        <input
+          id={"name"}
+          name="name"
+          value={name}
+          onChange={this.updateState}
+        />
+        <label htmlFor="subject">Subject</label>
+        <input
+          id={"subject"}
+          name="subject"
+          value={subject}
+          onChange={this.updateState}
+        />
+        <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id={"email"}
+          name="email"
+          value={email}
+          onChange={this.updateState}
+        />
+        <label htmlFor="zipCode">Zip Code</label>
+        <input
+          type="zipCode"
+          id={"zipCode"}
+          name="zipCode"
+          value={zipCode}
+          onChange={this.updateState}
+        />
+        <label htmlFor="phone">Phone Number</label>
+        <input
+          id={"phone"}
+          name="phone"
+          value={phone}
+          onChange={this.updateState}
+        />
+        <button type="submit">Teach Class</button>
+      </form>
+    );
+  }
+}
+
+export default Form;
