@@ -24,7 +24,7 @@
 // export default Student
 // import "./Students.css"
 import React from 'react'
-
+import './Students.css'
 import Student from "./Student"
 
 
