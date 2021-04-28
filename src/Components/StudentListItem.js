@@ -1,22 +1,20 @@
 import React from 'react'
-import studentData from "../data/studentData"
-import "./StudentList.css"
-import StudentListItem from "./StudentListItem"
 
-const StudentList = ({addStudent}) => {
-
-    const students = studentData.map(student => {
-        return <StudentListItem key={student.id} student ={student} addStudent={addStudent}/>
-    })
-
+// student is pulled as a props from StudentList.js
+const StudentListItem = ({student, addStudent}) => {
+    //student is an object, so we need to destructure it
+    const {name,age,bio,GPA,image} = student;
     return (
-        <section className="Students">
-            <h2>Build a Class</h2>
-            <ul>
-                {students}
-            </ul>
-        </section>
+        <li>
+            <h3>{name}</h3>
+            <p>Age: {age}</p>
+            <img src={image} alt="Pic of student"/>
+            <p>Bio: {bio}</p>
+            <p>GPA: {GPA.toFixed(2)}</p>
+            <button onClick={() => addStudent(student)}>Add To Class</button>
+            {/* If you dont want to pass the event, will have to wrap the function inside another function*/}
+        </li>
     )
 }
 
-export default StudentList
+export default StudentListItem;
