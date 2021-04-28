@@ -1,0 +1,25 @@
+.Students {
+    display: grid;
+}
+
+.Students ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+.Students li {
+    list-style: none;
+    border: 2px solid green;
+    padding: 5px;
+    margin: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Students img {
+    width: 150px;
+    height: 150px;
+}
