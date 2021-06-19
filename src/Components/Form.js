@@ -8,27 +8,23 @@ class Form extends React.Component {
   }
   checkSubmit = (e) => {
     e.preventDefault();
-    const {
-      name,
-      subject,
-      email,
-      zipCode,
-      phone,
-    } = this.state;
+    const { name, subject, email, zipCode, phone } = this.state;
 
-    const { averageGPA,
-      addedStudents } = this.props
+    const { averageGPA, addedStudents } = this.props;
 
-    if (name === ""||subject===""||email === "") {
+    if (name === "" || subject === "" || email === "") {
       alert("Input is invalid");
-    } else if(zipCode === "" || !isNaN(zipCode)){
-      alert("Zip code is not valid")
-    }else {
-      alert(`You are the now the teacher. 
-            You have ${addedStudents||0} students.
-              the Average GPA: ${averageGPA||0}`); //this is the only line with backticks , create more consistency
+    } else if (zipCode.length !== 5) {
+      alert("Zip code is not valid");
+    } else if (phone.length !== 10) {
+      alert("Phone number is not valid");
+    } else {
+      alert(`You are now the teacher.
+      You have ${addedStudents.length} students. 
+      The average GPA is ${averageGPA}`);
     }
   };
+
   updateState = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
